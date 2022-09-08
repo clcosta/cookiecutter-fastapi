@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "cookiecutter-fastapi"
+version = "0.1.0"
+description = ""
+authors = ["Claudio Lima"]
+readme = "README.md"
+packages = [{include = "cookiecutter_fastapi"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.81.0"
+uvicorn = {extras = ["standard"], version = "^0.18.3"}
+fastapi-jwt-auth = "^0.5.0"
+passlib = "^1.7.4"
+pyodbc = "^4.0.34"
+python-dotenv = "^0.21.0"
+bcrypt = "^4.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+cookiecutter = "^2.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

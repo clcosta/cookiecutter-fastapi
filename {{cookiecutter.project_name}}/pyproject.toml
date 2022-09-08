@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "cookiecutter-fastapi"
+version = "0.1.0"
+description = {{cookiecutter.description}}
+authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.81.0"
+uvicorn = {extras = ["standard"], version = "^0.18.3"}
+fastapi-jwt-auth = "^0.5.0"
+passlib = "^1.7.4"
+bcrypt = "^4.0.0"
+python-dotenv = "^0.21.0"{% if cookiecutter.database|lower() == 'y' %}
+pyodbc = "^4.0.34"
+{% endif %}
+
+[tool.black]
+line-length = 79
+
+[tool.isort]
+line_length = 79
+multi_line_output = 3
+profile = "black"
+src_paths = ["features", "helpers", "modules"]

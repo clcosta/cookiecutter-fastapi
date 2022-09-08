@@ -1,0 +1,10 @@
+{
+    "project_name": "api-fastapi",
+    "description": "The Amazing {{cookiecutter.project_name}}",
+    "version": "0.0.1",
+    "author": "Claudio Lima",
+    "email": "{{cookiecutter.author|lower()|replace(' ', '')}}@example.com",
+    "github_user": "{{cookiecutter.author|lower()|replace(' ', '')}}",
+    "database": ["n", "y"],
+    "_extensions": ["jinja2_time.TimeExtension"]
+}
