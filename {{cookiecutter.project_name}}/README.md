@@ -4,7 +4,7 @@
 
 ### Basic Usage
 ```bash
-{% if cookiecutter.python == 'python venv' %}pip install requirements.txt{% elif cookiecutter.python == 'poetry' %}poetry install{% endif %}
+{% if cookiecutter.python == 'python venv' %}pip install -r requirements.txt{% elif cookiecutter.python == 'poetry' %}poetry install{% endif %}
 # OR
 make install ${PYTHON_PATH} 
 # default value is "python.exe"
