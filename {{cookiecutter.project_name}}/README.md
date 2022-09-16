@@ -3,19 +3,15 @@
 
 
 ### Basic Usage
+```bash
+{% if cookiecutter.python == 'python venv' %}pip install requirements.txt{% elif cookiecutter.python == 'poetry' %}poetry install{% endif %}
+# OR
+make install ${PYTHON_PATH} 
+# default value is "python.exe"
 ```
-# pip
-pip3 install requirements.txt
-
-# poetry 
-poetry install
-
-# GNU Make
-make install ${PYTHON} 
-# default value is ./.venv/Scripts/python.exe
-
-# or
-make help 
+For more informations:
+```bash
+make help
 ```
 
 # Autor

@@ -6,5 +6,6 @@
     "email": "{{cookiecutter.author|lower()|replace(' ', '')}}@example.com",
     "github_user": "{{cookiecutter.author|lower()|replace(' ', '')}}",
     "database": ["n", "y"],
+    "python":["poetry","python venv"],
     "_extensions": ["jinja2_time.TimeExtension"]
 }
