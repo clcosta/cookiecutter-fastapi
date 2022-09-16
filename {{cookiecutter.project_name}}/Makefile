@@ -5,10 +5,10 @@ PYTHON_PATH = "python.exe"
 install: ## Install dependencies
 
 	{% if cookiecutter.python == 'python venv' %}
-	@printf "Install with python -m pip\n"
-	@$(PYTHON_PATH) -m pip install requirements.txt
+	@printf "\u1b[32mInstall with \033[1mpip\033[0m\033[m\n"
+	@$(PYTHON_PATH) -m pip install -r requirements.txt
 	{% else %}
-	@printf "Install with poetry\n"
+	@printf "\u1b[32mInstall with \033[1mpoetry\033[0m\033[m\n"
 	@poetry install
 	{% endif %}
 
@@ -25,6 +25,6 @@ docs: ## Open documentation for this API-Template
 
 .PHONY: help
 help:
-	@printf "Comandos do make\n\n"
+	@printf "\u1b[32mComandos do make\033[m\n"
 
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
